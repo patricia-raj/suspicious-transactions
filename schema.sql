@@ -36,6 +36,7 @@ CREATE TABLE merchant (
 CREATE TABLE transaction (
  	transaction_id INT PRIMARY KEY,
     transaction_date TIMESTAMP,
+    amount FLOAT,
 	credit_card VARCHAR(20),
     merchant_id INT,
     FOREIGN KEY (merchant_id) REFERENCES merchant(merchant_id)
